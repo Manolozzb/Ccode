@@ -1,0 +1,369 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+int main()
+{
+	int num1 = 10;
+	int num2 = 20;
+	if (num1 > num2)
+	    printf("极大值是：%d\n", num1);
+	else
+		printf("极大值是：%d\n", num2);
+	return 0;
+}
+
+#include<stdio.h>
+int MAX(int x,int y)
+{
+	if (x > y)
+		return x;
+	else
+		return y;
+}
+int main()
+{
+	int num1 = 10;
+	int num2 = 20;
+	int max = 0;
+	max = MAX(num1, num2);
+	printf("max=%d\n", max);
+	return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+        int a = 0;
+	int b = ~a;
+	printf("%d\n", b);
+	return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+	int a = 10;
+	int b = a++;
+	printf("a=%d,b=%d", a, b);
+	return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+	int a = (int)3.14;
+	printf("%d\n", a);
+	return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+	int a = 2;
+	int b = 3;
+	int c = a && b;
+	printf("%d\n", c);
+	return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+	int a = 10;
+	printf("%p\n", &a);
+	int* p = &a;
+	printf("%p\n", p);
+	*p = 20;
+	printf("%d\n", *p);
+	char ch = 'w';
+	char* pc = &ch;
+	*pc = 'a';
+	printf("%c\n", ch);
+	printf("%d\n", sizeof(pc));
+	return 0;
+}
+
+#include<stdio.h>
+#define MAX(X,Y)(X>Y?X:Y)
+int main()
+{
+	int a = 10;
+	int b = 20;
+	int max = MAX(a, b);
+	printf("max=%d\n", max);
+	return 0;
+}
+
+#include<stdio.h>
+void test()
+{
+	static int a = 1;
+	a++;
+	printf("a=%d\n", a);
+}
+int main()
+{
+	int i = 0;
+	while (i < 5)
+	{
+		test();
+		i++;
+	}
+	return 0;
+}
+
+int g_val = 2020;
+
+#include<stdio.h>
+int main()
+{
+	extern int g_val;
+	printf("g_val=%d", g_val);
+	return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+	int a = 10;
+	int b = 20;
+	int max = 0;
+	max = { a > b ? a : b };
+	printf("max=%d\n", max);
+	unsigned int num = 50;
+	typedef unsigned int uint;
+	uint c = 100;
+	printf("%d\n", c);
+	register int num1 = 200;
+	printf("%d\n", num1);
+	return 0;
+}
+
+#include<stdio.h>
+#include<string.h>
+struct Book
+{
+	char name[20];
+	short price;
+};
+int main()
+{
+	struct Book b1 = { "C语言程序设计",55 };
+	printf("书名：%s\n", b1.name);
+	printf("价格：%d元\n", b1.price);
+	b1.price = 15;
+	printf("修改后的价格：%d\n", b1.price);
+	struct Book* pb = &b1;
+	printf("%s\n", (*pb).name);
+	printf("%s\n", pb->name);
+	strcpy(b1.name,"C++");
+	printf("%s\n", b1.name);
+	return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+	if (1);
+	printf("hehe\n");
+	return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+	while (1)
+	printf("hehe\n");
+	return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+	int i = 1;
+	while(i<=10)
+	{
+		printf("%d\n", i);
+		i++;
+	}
+	return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+	int i = 1;
+	while (i <= 10)
+	{
+		if (i == 5)
+		break;
+		printf("%d\n", i);
+		i++;
+	}
+	return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+	int i = 1;
+	while (i <= 10)
+	{
+		if (i == 5)
+		continue;
+		printf("%d\n", i);
+		i++;
+	}
+	return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+        int i = 0;//打印1-10的数字
+        while (i <= 10)
+        {
+        	i++;
+                if (i == 5)
+		continue;
+        	printf("%d\n", i);
+        }
+	return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+   	int ch = getchar();
+	putchar(ch);
+	printf("%c\n", ch);
+	return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+	int ch = 0;
+	while ((ch = getchar()) != EOF)
+	{
+		putchar(ch);
+	}
+	return 0;
+}
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+int main()
+{
+	int day = 0;
+        scanf("%d", &day);
+        switch (day)
+        {
+        case 1:
+	  printf("星期1\n");
+        case 2:
+	  printf("星期2\n");
+        case 3:
+	  printf("星期3\n");
+        case 4:
+	  printf("星期4\n");
+        case 5:
+	  printf("星期5\n");
+        case 6:
+	  printf("星期6\n");
+        case 7:
+	  printf("星期天\n");
+        }
+	return 0;
+}
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+int main()
+{
+	int day = 0;
+	scanf("%d", &day);
+	switch (day)
+	{
+	case 1:
+		printf("星期1\n");
+		break;
+	case 2:
+		printf("星期2\n");
+		break;
+	case 3:
+		printf("星期3\n");
+		break;
+	case 4:
+		printf("星期4\n");
+		break;
+	case 5:
+		printf("星期5\n");
+		break;
+	case 6:
+		printf("星期6\n");
+		break;
+	case 7:
+		printf("星期天\n");
+		break;
+	}
+
+	return 0;
+}
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+int main()
+{
+	int day = 0;
+	scanf("%d", &day);
+	switch (day)
+	{
+	case 1:
+	case 2:
+	case 3:
+	case 4:
+	case 5:
+		printf("工作日\n");
+		break;
+	case 6:
+	case 7:
+		printf("休息日\n");
+		break;
+	default:
+		printf("输入错误\n");
+	}
+	return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+	int age = 50;
+	if (age < 18)
+		printf("未成年\n");
+	else if (age >= 18 && age < 28)
+		printf("青年\n");
+	else if (age >= 28 && age < 50)
+		printf("壮年\n");
+	else if (age >= 50 && age < 90)
+		printf("老年\n");
+	else
+		printf("老不死\n");
+	return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+	int a = 0;
+	int b = 2;
+	if (a == 1)
+	{
+	    if (b == 2)
+		printf("hehe\n");
+	}
+	else
+		printf("haha\n");
+	return 0;
+}
+
