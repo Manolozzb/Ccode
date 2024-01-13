@@ -1,0 +1,12 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+int main()
+{
+	int num1 = 10;
+	int num2 = 20;
+	if (num1 > num2)
+	    printf("极大值是：%d\n", num1);
+	else
+		printf("极大值是：%d\n", num2);
+	return 0;
+}
